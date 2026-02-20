@@ -63,6 +63,8 @@ app.post("/", (request, response) => {
 });
 
 app.delete("/:id",(request,response)=>{
+    users=users.filter((users)=>user.id !== Number(request.params.id))
+    res.json(users)
 
 })
 app.get("/:id", (request, response) => {
