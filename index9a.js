@@ -18,11 +18,8 @@
 // });
 
 
-
-
 import express from "express";
 const app = express();
-
 const auth = (req, res, next) => {
   if (req.url === "/1234") {
     next();
@@ -36,3 +33,4 @@ app.get("/1234", auth, (req, res) => {
 });
 
 app.listen(8080);
+
