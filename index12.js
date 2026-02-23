@@ -29,27 +29,39 @@
 
 
 
+// import express from "express"
+// const app = express();
+// app.listen(8080);
+
+// const userRouter = express.Router();
+// const productRouter = express.Router();
+
+// userRouter.get("/",(req,res)=>{
+//     res.send("hello world of user router")
+// })
+// userRouter.post("/",(req,res)=>{
+//     res.send("This is post request of users router")
+// })
+
+// productRouter.get("/",(req,res)=>{
+//     res.send("hello world of product router")
+// })
+// productRouter.post("/",(req,res)=>{
+//     res.send("This is post request of product router")
+// })
+
+
+// app.use("/api/users",userRouter)
+// app.use("/api/products",productRouter)
+
+
+
+
+//router
 import express from "express"
-const app = express();
-app.listen(8080);
-
-const userRouter = express.Router();
-const productRouter = express.Router();
-
-userRouter.get("/",(req,res)=>{
-    res.send("hello world of user router")
-})
-userRouter.post("/",(req,res)=>{
-    res.send("This is post request of users router")
-})
-
-productRouter.get("/",(req,res)=>{
-    res.send("hello world of product router")
-})
-productRouter.post("/",(req,res)=>{
-    res.send("This is post request of product router")
-})
-
-
+import userRouter from "./routes/userRoutes.js"
+import productRouter from "./routes/productRoutes.js"
+const app = express()
+app.listen(8080,()=>console.log("Server started"))
 app.use("/api/users",userRouter)
 app.use("/api/products",productRouter)
