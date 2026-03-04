@@ -1,9 +1,19 @@
 // Accept two numbers through command line argument
 // and print the sum
 
-const num1 = Number(process.argv[2]);
-const num2 = Number(process.argv[3]);
+// const num1 = Number(process.argv[2]);
+// const num2 = Number(process.argv[3]);
 
-const sum = num1 + num2;
+// const sum = num1 + num2;
 
-console.log(`Sum of ${num1} and ${num2} is: ${sum}`);
+// console.log(`Sum of ${num1} and ${num2} is: ${sum}`);
+
+
+
+
+//Accept two numbers through command line argument
+//and print the sum and upload to github, put the message
+
+let num1 = process.argv[2]
+let num2 = process.argv[3]
+console.log(Number(num1) + Number(num2))
